@@ -1,0 +1,49 @@
+IMAGES
+
+BUILD IMAGE 
+docker build -t <Image-name> .
+
+BUILD IMAGE WITH VERSION
+docker build -t <Image-name>:<version-name> .
+
+LIST IMAGES
+docker images 
+
+DELETE IMAGE
+docker image rm <Image-name>
+
+FOREFULLY DELETE IMAGE
+docker image rm <Image-name> -f
+
+CONTAINERS 
+
+BUILD CONTAINERS
+docker ps -a 
+
+DELETE CONTAINER
+docker container rm <container-name>
+
+FOREFULLY DELETE CONTAINER
+docker container rm <container-name> -f
+
+RUN IMAGE VERSION WITH CONTAINER
+
+docket run --name <container-name> -p 5500:5500 <Image-name>:<version-name> 
+
+RUN IMAGE VERSION WITH CONTAINER and VOLUME (REAL-TIME)
+
+docker run --name <container-name> -p 5000:5000 --rm -v D:\Personal\Docker-Mongoose:/app <Image-name>
+
+
+DELETES ALL IMAGES AND CONTAINERS
+docker system prune -a
+
+
+
+Docker Image build when uploading to play with docker using repo
+docker buildx build --platform linux/amd64  -t <repo-name> .
+
+
+
+
+
